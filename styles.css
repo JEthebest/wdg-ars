@@ -1,0 +1,827 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    line-height: 1.6;
+    color: #333;
+}
+
+.landing-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+/* Better mobile base */
+@media (max-width: 768px) {
+    section {
+        min-height: auto;
+        padding: 50px 20px;
+    }
+}
+
+.section-content {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .section-content {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* Mountain Dividers */
+.mountain-divider {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.mountain-divider svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.mountain-divider-1 {
+    margin-top: -1px;
+}
+
+.mountain-divider-2 {
+    transform: rotate(180deg);
+    margin: -1px 0;
+}
+
+.mountain-divider-3 {
+    margin-top: -1px;
+}
+
+.mountain-divider-4 {
+    transform: rotate(180deg);
+    margin: -1px 0;
+}
+
+/* Static mountain paths - no animations */
+.mountain-divider path {
+    transition: none;
+}
+
+
+
+/* Static Mountain Dividers */
+.mountain-divider {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Static Mountain SVGs */
+.mountain-divider svg {
+    display: block;
+}
+
+.mountain-divider path {
+    opacity: 1;
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background: linear-gradient(180deg, #f8f9f5 0%, #fff 70%);
+    position: relative;
+    flex-direction: column;
+}
+
+.mountains-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 150 L80 50 L160 100 L240 30 L320 80 L400 120 L400 200 L0 200 Z' fill='%23f0f2ed'/%3E%3Cpath d='M50 180 L120 80 L190 130 L260 60 L330 110 L400 140 L400 200 L0 200 Z' fill='%23e8ede0'/%3E%3C/svg%3E") no-repeat center;
+    background-size: cover;
+    opacity: 0.4;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.save-date {
+    font-family: 'Dancing Script', cursive;
+    font-size: 64px;
+    color: #3a4330;
+    margin-bottom: 60px;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.mountain-illustration {
+    margin: 40px 0;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mountains-svg {
+    width: 400px;
+    height: 120px;
+}
+
+.names-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+
+.bride-name, .groom-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    color: #3a4330;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+.heart {
+    font-size: 32px;
+    color: #4a5340;
+    margin: 0 15px;
+}
+
+.date-container {
+    margin: 20px 0;
+}
+
+.wedding-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #3a4330;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #8B9575;
+    border-radius: 12px;
+    padding: 15px 25px;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(139, 149, 117, 0.2);
+}
+
+
+
+/* Invitation Intro */
+.invitation-intro {
+    background: linear-gradient(180deg, #8B9575 0%, #6B7460 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 2;
+}
+
+.invitation-text {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.event-description {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Story Section */
+.story-section {
+    background: #8B9575;
+    color: white;
+    position: relative;
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+    letter-spacing: 4px;
+    color: inherit;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, currentColor, transparent);
+    border-radius: 2px;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    text-align: left;
+}
+
+.story-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.story-text p {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.couple-photo-frame {
+    width: 200px;
+    height: 250px;
+    justify-self: center;
+}
+
+.photo-frame {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.photo-placeholder-static {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.heart-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.photo-placeholder-static p {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: 'Playfair Display', serif;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+
+/* Venue Section */
+.venue-section {
+    background: #f8f9f5;
+    color: #3a4330;
+    position: relative;
+}
+
+.venue-info {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.invitation-text-block {
+    margin-bottom: 50px;
+}
+
+.invitation-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.event-details {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.detail-label {
+    font-family: 'Crimson Text', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #5a6350;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.event-date-box, .event-time-box, .location-box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #8B9575;
+    border-radius: 15px;
+    padding: 20px 30px;
+    box-shadow: 0 8px 25px rgba(139, 149, 117, 0.15);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.event-date-box:hover, .event-time-box:hover, .location-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(139, 149, 117, 0.25);
+    border-color: #6B7460;
+}
+
+.event-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #3a4330;
+    letter-spacing: 0.5px;
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.event-time {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #4a5340;
+    letter-spacing: 2px;
+    display: block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.location-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 28px;
+    font-weight: 700;
+    color: #3a4330;
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.map-link {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4a5340;
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid #8B9575;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.map-link:hover {
+    background: #8B9575;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(139, 149, 117, 0.3);
+}
+
+.venue-visual {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.glass-illustration {
+    display: inline-block;
+}
+
+.glass-svg {
+    width: 80px;
+    height: 80px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Section */
+.footer-section {
+    background: #6B7460;
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    min-height: auto;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.heart-decoration {
+    font-size: 48px;
+    margin: 30px 0;
+}
+
+.footer-date {
+    font-size: 16px;
+    opacity: 0.8;
+    font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-content {
+        padding: 0 20px;
+    }
+    
+    .save-date {
+        font-size: 48px;
+    }
+    
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .photo-upload-container {
+        width: 250px;
+        height: 200px;
+        margin: 0 auto;
+    }
+    
+    .schedule-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    section {
+        padding: 40px 15px;
+    }
+    
+    .names-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .name-input {
+        width: 250px;
+        font-size: 36px;
+    }
+    
+    .save-date {
+        font-size: 42px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .venue-info input {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        max-width: 250px;
+    }
+    
+    .color-palette {
+        gap: 15px;
+    }
+    
+    .color-circle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .program-schedule {
+        padding: 20px;
+    }
+}
+
+/* Smooth transitions for all interactive elements */
+input, button {
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    transform: scale(1.02);
+}
+
+/* Scroll animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #8B9575;
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #6B7460;
+}
+
+/* Mobile Responsive - Complete Overhaul */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+    
+    .section-content {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    /* Hero Section Mobile */
+    .save-date {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+    
+    .names-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .bride-name, .groom-name {
+        font-size: 32px;
+    }
+    
+    .heart {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    
+    .wedding-date {
+        font-size: 24px;
+        padding: 12px 20px;
+        margin: 20px 0;
+    }
+    
+    .invitation-intro {
+        font-size: 18px;
+        padding: 0 10px;
+        line-height: 1.5;
+    }
+    
+    .invitation-text {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    
+    .event-description {
+        font-size: 14px;
+    }
+    
+    /* Section Titles Mobile */
+    .section-title {
+        font-size: 28px;
+        letter-spacing: 1px;
+        margin-bottom: 30px;
+    }
+    
+    /* Story Section Mobile */
+    .story-content {
+        gap: 25px;
+    }
+    
+    .story-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+    .couple-photo-frame {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .heart-icon {
+        font-size: 36px;
+    }
+    
+    /* Venue Section Mobile */
+    .event-details {
+        gap: 20px;
+    }
+    
+    .detail-item {
+        gap: 10px;
+    }
+    
+    .detail-label {
+        font-size: 14px;
+    }
+    
+    .event-date-box, .event-time-box, .location-box {
+        padding: 15px 20px;
+        margin: 0 5px;
+        width: calc(100% - 10px);
+        max-width: none;
+    }
+    
+    .event-date {
+        font-size: 16px;
+    }
+    
+    .event-time {
+        font-size: 24px;
+        letter-spacing: 1px;
+    }
+    
+    .location-name {
+        font-size: 20px;
+    }
+    
+    .map-link {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+    
+    /* Glass illustration mobile */
+    .glass-svg {
+        width: 60px;
+        height: 60px;
+    }
+    
+    /* Footer Mobile */
+    .footer-section {
+        padding: 40px 20px;
+    }
+    
+    .footer-content p {
+        font-size: 16px;
+    }
+    
+    .heart-decoration {
+        font-size: 36px;
+        margin: 20px 0;
+    }
+    
+    .footer-date {
+        font-size: 14px;
+    }
+    
+    /* Mountain dividers mobile */
+    .mountain-divider {
+        height: 80px;
+    }
+}
+
+/* Extra Small Mobile (iPhone SE, etc.) */
+@media (max-width: 375px) {
+    section {
+        padding: 30px 10px;
+    }
+    
+    .save-date {
+        font-size: 32px;
+    }
+    
+    .bride-name, .groom-name {
+        font-size: 28px;
+    }
+    
+    .wedding-date {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        letter-spacing: 0.5px;
+    }
+    
+    .invitation-intro {
+        font-size: 16px;
+    }
+    
+    .event-date-box, .event-time-box, .location-box {
+        padding: 12px 15px;
+        margin: 0 2px;
+    }
+    
+    .event-time {
+        font-size: 20px;
+    }
+    
+    .location-name {
+        font-size: 18px;
+    }
+    
+    .story-text {
+        font-size: 14px;
+    }
+}
+
+/* Large Mobile Landscape */
+@media (max-width: 812px) and (orientation: landscape) {
+    section {
+        min-height: auto;
+        padding: 30px 20px;
+    }
+    
+    .hero-section {
+        min-height: auto;
+    }
+    
+    .names-container {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
