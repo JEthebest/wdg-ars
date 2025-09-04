@@ -182,14 +182,45 @@ section {
 
 .wedding-date {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
+    font-size: 42px;
+    font-weight: 700;
     color: #3a4330;
-    background: rgba(255, 255, 255, 0.9);
-    border: 3px solid #8B9575;
-    border-radius: 12px;
-    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid #8B9575;
+    border-radius: 20px;
+    padding: 25px 40px;
     display: inline-block;
-    box-shadow: 0 4px 15px rgba(139, 149, 117, 0.2);
+    box-shadow: 0 8px 25px rgba(139, 149, 117, 0.3);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 2px;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.wedding-date:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 35px rgba(139, 149, 117, 0.4);
+    border-color: #6B7460;
+}
+
+.wedding-date::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    background: linear-gradient(45deg, #8B9575, #6B7460, #8B9575);
+    border-radius: 25px;
+    z-index: -1;
+    opacity: 0.2;
+    animation: dateGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes dateGlow {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.4; }
 }
 
 
@@ -513,21 +544,15 @@ section {
         font-size: 48px;
     }
     
+    .wedding-date {
+        font-size: 36px;
+        padding: 20px 30px;
+        letter-spacing: 1.5px;
+    }
+    
     .story-content {
         grid-template-columns: 1fr;
         gap: 30px;
-        text-align: center;
-    }
-    
-    .photo-upload-container {
-        width: 250px;
-        height: 200px;
-        margin: 0 auto;
-    }
-    
-    .schedule-item {
-        grid-template-columns: 1fr;
-        gap: 15px;
         text-align: center;
     }
 }
@@ -542,37 +567,18 @@ section {
         gap: 15px;
     }
     
-    .name-input {
-        width: 250px;
-        font-size: 36px;
-    }
-    
     .save-date {
         font-size: 42px;
     }
     
+    .wedding-date {
+        font-size: 30px;
+        padding: 18px 25px;
+        letter-spacing: 1px;
+    }
+    
     .section-title {
         font-size: 28px;
-    }
-    
-    .venue-info input {
-        display: block;
-        margin: 10px auto;
-        width: 80%;
-        max-width: 250px;
-    }
-    
-    .color-palette {
-        gap: 15px;
-    }
-    
-    .color-circle {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .program-schedule {
-        padding: 20px;
     }
 }
 
@@ -652,9 +658,10 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .wedding-date {
-        font-size: 24px;
-        padding: 12px 20px;
+        font-size: 28px;
+        padding: 16px 24px;
         margin: 20px 0;
+        letter-spacing: 1px;
     }
     
     .invitation-intro {
@@ -789,8 +796,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .wedding-date {
-        font-size: 20px;
-        padding: 10px 15px;
+        font-size: 24px;
+        padding: 14px 20px;
+        letter-spacing: 0.5px;
     }
     
     .section-title {
