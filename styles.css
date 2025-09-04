@@ -163,11 +163,13 @@ section {
 }
 
 .bride-name, .groom-name {
-    font-family: 'Dancing Script', cursive;
-    font-size: 48px;
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 400;
     color: #3a4330;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
     display: inline-block;
+    letter-spacing: 1px;
 }
 
 .heart {
@@ -649,7 +651,8 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .bride-name, .groom-name {
-        font-size: 32px;
+        font-size: 38px;
+        font-weight: 400;
     }
     
     .heart {
@@ -792,7 +795,8 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .bride-name, .groom-name {
-        font-size: 28px;
+        font-size: 32px;
+        font-weight: 400;
     }
     
     .wedding-date {
