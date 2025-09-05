@@ -163,13 +163,14 @@ section {
 }
 
 .bride-name, .groom-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
+    font-family: 'Crimson Text', serif;
+    font-size: 68px;
     font-weight: 400;
+    font-style: italic;
     color: #3a4330;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
     display: inline-block;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .heart {
@@ -626,17 +627,17 @@ body::-webkit-scrollbar-thumb:hover {
 /* Mobile Responsive - Complete Overhaul */
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 16px;
     }
     
     section {
-        padding: 40px 15px;
+        padding: 50px 20px;
         min-height: auto;
     }
     
     .section-content {
         max-width: 100%;
-        padding: 0;
+        padding: 0 10px;
     }
     
     /* Hero Section Mobile */
@@ -647,17 +648,17 @@ body::-webkit-scrollbar-thumb:hover {
     
     .names-container {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
     
     .bride-name, .groom-name {
-        font-size: 38px;
+        font-size: 46px;
         font-weight: 400;
     }
     
     .heart {
-        font-size: 24px;
-        margin: 10px 0;
+        font-size: 28px;
+        margin: 0;
     }
     
     .wedding-date {
@@ -686,7 +687,7 @@ body::-webkit-scrollbar-thumb:hover {
     
     /* Section Titles Mobile */
     .section-title {
-        font-size: 28px;
+        font-size: 32px;
         letter-spacing: 1px;
         margin-bottom: 30px;
     }
@@ -697,8 +698,8 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .story-text {
-        font-size: 20px;
-        line-height: 1.7;
+        font-size: 24px;
+        line-height: 1.8;
         font-weight: 400;
     }
     
@@ -795,7 +796,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .bride-name, .groom-name {
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 400;
     }
     
@@ -806,7 +807,7 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .section-title {
-        font-size: 24px;
+        font-size: 28px;
         letter-spacing: 0.5px;
     }
     
@@ -839,8 +840,9 @@ body::-webkit-scrollbar-thumb:hover {
     }
     
     .story-text {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 400;
+        line-height: 1.7;
     }
 }
 
